@@ -16,9 +16,6 @@ jobs:
           - os: macos-latest
             artifact_os: macos
             binary_path: sipnet
-          - os: windows-latest
-            artifact_os: windows
-            binary_path: sipnet.exe
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout code
