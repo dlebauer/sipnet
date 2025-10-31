@@ -1,0 +1,2358 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../model-structure/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Parameters - SIPNET Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sipnet-model-states-and-parameters-sec-parameters" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SIPNET Documentation" class="md-header__button md-logo" aria-label="SIPNET Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SIPNET Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Parameters
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/PecanProject/sipnet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SIPNET Documentation" class="md-nav__button md-logo" aria-label="SIPNET Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SIPNET Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/PecanProject/sipnet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Model Description
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Model Description
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Parameters
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Parameters
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables-pools-fluxes-and-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables (Pools, Fluxes, and Parameters)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscripts-temporal-spatial-or-contextual-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscripts (Temporal, Spatial, or Contextual Identifiers)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-time-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run-time Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run-time Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-state-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial state values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#litter-quality-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Litter Quality Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#photosynthesis-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Photosynthesis parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phenology-related-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phenology-related parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allocation-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allocation parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autotrophic-respiration-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autotrophic respiration parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soil-respiration-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soil respiration parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nitrogen-cycle-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nitrogen Cycle Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methane-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methane parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moisture-related-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moisture-related parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree-physiological-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree physiological parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-coded-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard-coded Values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Model Specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/running-sipnet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Running SIPNET
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/model-inputs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Model Inputs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/model-outputs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Model Outputs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/code-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Code Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/cli-options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adding New Command Line Options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/logging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONTRIBUTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHANGELOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CODE_OF_CONDUCT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Code of Conduct
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables-pools-fluxes-and-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables (Pools, Fluxes, and Parameters)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscripts-temporal-spatial-or-contextual-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscripts (Temporal, Spatial, or Contextual Identifiers)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-time-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run-time Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run-time Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-state-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial state values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#litter-quality-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Litter Quality Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#photosynthesis-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Photosynthesis parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phenology-related-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phenology-related parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allocation-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allocation parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autotrophic-respiration-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autotrophic respiration parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soil-respiration-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soil respiration parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nitrogen-cycle-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nitrogen Cycle Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methane-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methane parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moisture-related-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moisture-related parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree-physiological-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree physiological parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-coded-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard-coded Values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/PecanProject/sipnet/edit/master/docs/parameters.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="sipnet-model-states-and-parameters-sec-parameters">SIPNET Model States and Parameters  {@sec-parameters}<a class="headerlink" href="#sipnet-model-states-and-parameters-sec-parameters" title="Permanent link">&para;</a></h1>
+<!--TODO insert overview here-->
+<p>Note: this is a work in progress. </p>
+<ul>
+<li>Actual parameters used depend on the how the model structure is configured. </li>
+<li>Numbered items are cross-referenced with original documentation.</li>
+<li>"Notation" section is consistent with model equations, some of the mathematical symbols in the tables may either be missing or need to be updated.</li>
+</ul>
+<h2 id="notation">Notation<a class="headerlink" href="#notation" title="Permanent link">&para;</a></h2>
+<h3 id="variables-pools-fluxes-and-parameters">Variables (Pools, Fluxes, and Parameters)<a class="headerlink" href="#variables-pools-fluxes-and-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Category</strong></th>
+<th style="text-align: left;"><strong>Symbol</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>State variables</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(C\)</span></td>
+<td style="text-align: left;">Carbon pool</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(N\)</span></td>
+<td style="text-align: left;">Nitrogen pool</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(W\)</span></td>
+<td style="text-align: left;">Water pool or content</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(CN\)</span></td>
+<td style="text-align: left;">Carbon-to-Nitrogen ratio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fluxes and rates</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(F\)</span></td>
+<td style="text-align: left;">Generic flux of carbon, nitrogen, or water</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(A\)</span></td>
+<td style="text-align: left;">Photosynthetic assimilation (net photosynthesis)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(R\)</span></td>
+<td style="text-align: left;">Respiration flux</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(ET\)</span></td>
+<td style="text-align: left;">Evapotranspiration</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(GPP\)</span></td>
+<td style="text-align: left;">Gross Primary Production</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(NPP\)</span></td>
+<td style="text-align: left;">Net Primary Production</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(NEE\)</span></td>
+<td style="text-align: left;">Net Ecosystem Exchange</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Environmental drivers</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(T\)</span></td>
+<td style="text-align: left;">Temperature</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(VPD\)</span></td>
+<td style="text-align: left;">Vapor Pressure Deficit</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(PAR\)</span></td>
+<td style="text-align: left;">Photosynthetically Active Radiation</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(LAI\)</span></td>
+<td style="text-align: left;">Leaf Area Index</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Parameters</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(K\)</span></td>
+<td style="text-align: left;">Rate constant (e.g., for decomposition or respiration)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(Q_{10}\)</span></td>
+<td style="text-align: left;">Temperature sensitivity coefficient</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(\alpha\)</span></td>
+<td style="text-align: left;">Fraction of NPP allocated to a plant pool</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(f\)</span></td>
+<td style="text-align: left;">Fraction of a pool or flux other than NPP</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(k\)</span></td>
+<td style="text-align: left;">Scaling factor</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(D\)</span></td>
+<td style="text-align: left;">Dependency or damping function</td>
+</tr>
+</tbody>
+</table>
+<h3 id="subscripts-temporal-spatial-or-contextual-identifiers">Subscripts (Temporal, Spatial, or Contextual Identifiers)<a class="headerlink" href="#subscripts-temporal-spatial-or-contextual-identifiers" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Category</strong></th>
+<th style="text-align: left;"><strong>Subscript</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Temporal identifiers</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_0\)</span></td>
+<td style="text-align: left;">Initial value</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_t\)</span></td>
+<td style="text-align: left;">Value at time <span class="arithmatex">\(t\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_d\)</span></td>
+<td style="text-align: left;">Daily value or average</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{avg}\)</span></td>
+<td style="text-align: left;">Average value (e.g., over a timestep or spatial area)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{max}\)</span></td>
+<td style="text-align: left;">Maximum value (e.g., temperature or rate)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{min}\)</span></td>
+<td style="text-align: left;">Minimum value (e.g., temperature or rate)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{opt}\)</span></td>
+<td style="text-align: left;">Optimal value (e.g., temperature or rate)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Structural components</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{leaf}\)</span></td>
+<td style="text-align: left;">Leaf pools or fluxes</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{wood}\)</span></td>
+<td style="text-align: left;">Wood pools or fluxes</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{root}\)</span></td>
+<td style="text-align: left;">Root pool</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{fine root}\)</span></td>
+<td style="text-align: left;">Fine root pool</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{coarse root}\)</span></td>
+<td style="text-align: left;">Coarse root pool</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{soil}\)</span></td>
+<td style="text-align: left;">Soil pools or processes</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{litter}\)</span></td>
+<td style="text-align: left;">Litter pools or processes</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{veg}\)</span></td>
+<td style="text-align: left;">Vegetation processes (general)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Processes context</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{resp}\)</span></td>
+<td style="text-align: left;">Respiration processes</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{dec}\)</span></td>
+<td style="text-align: left;">Decomposition processes</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{vol}\)</span></td>
+<td style="text-align: left;">Volatilization processes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Chemical / environmental identifiers</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{org}\)</span></td>
+<td style="text-align: left;">Organic forms</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_\text{mineral}\)</span></td>
+<td style="text-align: left;">Mineral forms</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span class="arithmatex">\(X_{\text{anaer}}\)</span></td>
+<td style="text-align: left;">Anaerobic soil conditions</td>
+</tr>
+</tbody>
+</table>
+<p>Subscripts may be used in combination, e.g. <span class="arithmatex">\(X_{\text{soil,mineral},0}\)</span>.</p>
+<h2 id="run-time-parameters">Run-time Parameters<a class="headerlink" href="#run-time-parameters" title="Permanent link">&para;</a></h2>
+<p>Run-time parameters can change from one run to the next, or when the model is stopped and restarted. These include initial state values and parameters related to plant physiology, soil physics, and biogeochemical cycling.</p>
+<h3 id="initial-state-values">Initial state values<a class="headerlink" href="#initial-state-values" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Symbol</th>
+<th>Parameter Name</th>
+<th>Definition</th>
+<th>Units</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><span class="arithmatex">\(C_{\text{wood},0}\)</span></td>
+<td>plantWoodInit</td>
+<td>Initial wood carbon</td>
+<td><span class="arithmatex">\(\text{g C} \cdot \text{m}^{-2} \text{ ground area}\)</span></td>
+<td>above-ground + roots</td>
+</tr>
+<tr>
+<td>2</td>
+<td><span class="arithmatex">\(LAI_0\)</span></td>
+<td>laiInit</td>
+<td>Initial leaf area</td>
+<td>m^2 leaves * m^-2 ground area</td>
+<td>multiply by SLW to get initial plant leaf C: <span class="arithmatex">\(C_{\text{leaf},0} = LAI_0 \cdot SLW\)</span></td>
+</tr>
+<tr>
+<td>3</td>
+<td><span class="arithmatex">\(C_{\text{litter},0}\)</span></td>
+<td>litterInit</td>
+<td>Initial litter carbon</td>
+<td><span class="arithmatex">\(\text{g C} \cdot \text{m}^{-2} \text{ ground area}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td><span class="arithmatex">\(C_{\text{soil},0}\)</span></td>
+<td>soilInit</td>
+<td>Initial soil carbon</td>
+<td><span class="arithmatex">\(\text{g C} \cdot \text{m}^{-2} \text{ ground area}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td><span class="arithmatex">\(W_{\text{litter},0}\)</span></td>
+<td>litterWFracInit</td>
+<td></td>
+<td>unitless</td>
+<td>fraction of litterWHC</td>
+</tr>
+<tr>
+<td>6</td>
+<td><span class="arithmatex">\(W_{\text{soil},0}\)</span></td>
+<td>soilWFracInit</td>
+<td></td>
+<td>unitless</td>
+<td>fraction of soilWHC</td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(N_{\text{org, litter},0}\)</span></td>
+<td></td>
+<td>Initial litter organic nitrogen content</td>
+<td>g N m<span class="arithmatex">\(^{-2}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(N_{\text{org, soil},0}\)</span></td>
+<td></td>
+<td>Initial soil organic nitrogen content</td>
+<td>g N m<span class="arithmatex">\(^{-2}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(N_{\text{min, soil},0}\)</span></td>
+<td></td>
+<td>Initial soil mineral nitrogen content</td>
+<td>g N m<span class="arithmatex">\(^{-2}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\({CH_4}_{\text{soil},0}\)</span></td>
+<td></td>
+<td>Initial methane concentration in the soil</td>
+<td>g C m<span class="arithmatex">\(^{-2}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\({N_2O}_{\text{soil},0}\)</span></td>
+<td></td>
+<td>Nitrous oxide concentration in the soil</td>
+<td>g N m<span class="arithmatex">\(^{-2}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(f_{\text{fine root},0}\)</span></td>
+<td>fineRootFrac</td>
+<td>Fraction of <code>plantWoodInit</code> allocated to initial fine root carbon pool</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(f_{\text{coarse root},0}\)</span></td>
+<td>coarseRootFrac</td>
+<td>Fraction of <code>plantWoodInit</code> allocated to initial coarse root carbon pool</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!--not used in CCMMF
+
+| 7 |                                          | snowInit        | Initial snow water                        | cm water equiv.                |                                                   |
+|   |                                          | microbeInit     |                                           |                                |                                                   |
+
+-->
+
+<!--if separating N_min into NH4 and NO3
+
+### Initial state values 
+
+|     | Symbol                   | Parameter Name | Definition                    | Units        | notes |
+| --- | ------------------------ | -------------- | ----------------------------- | ------------ | ----- |
+|     | ${NH_4}_{\text{soil},0}$ |                | Initial soil ammonium content | g N m$^{-2}$ |       |
+|     | ${NO_3}_{\text{soil},0}$ |                | Initial soil nitrate content  | g N m$^{-2}$ |       |
+
+-->
+
+<h3 id="litter-quality-parameters">Litter Quality Parameters<a class="headerlink" href="#litter-quality-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Symbol</th>
+<th>Name</th>
+<th>Description</th>
+<th>Units</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(CN_{\textrm{litter}}\)</span></td>
+<td></td>
+<td>Carbon to Nitrogen ratio of litter</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(CN_{\textrm{wood}}\)</span></td>
+<td></td>
+<td>Carbon to Nitrogen ratio of wood</td>
+<td></td>
+<td>CN_coarse_root = CN_wood</td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(CN_{\textrm{leaf}}\)</span></td>
+<td></td>
+<td>Carbon to Nitrogen ratio of leaves</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(CN_{\textrm{fine root}}\)</span></td>
+<td></td>
+<td>Carbon to Nitrogen ratio of fine roots</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(CN_{\textrm{coarse root}}\)</span></td>
+<td></td>
+<td>Carbon to Nitrogen ratio of coarse roots</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(k_\textit{CN}\)</span></td>
+<td></td>
+<td>Decomposition CN scaling parameter</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="photosynthesis-parameters">Photosynthesis parameters<a class="headerlink" href="#photosynthesis-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Symbol</th>
+<th>Parameter Name</th>
+<th>Definition</th>
+<th>Units</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8</td>
+<td><span class="arithmatex">\(A_{\text{max}}\)</span></td>
+<td>aMax</td>
+<td>Maximum net CO2 assimilation rate</td>
+<td><span class="arithmatex">\(\text{nmol CO}_2 \cdot \text{g}^{-1} \cdot \text{leaf} \cdot \text{s}^{-1}\)</span></td>
+<td>assuming max. possible PAR, all intercepted, no temp, water or VPD stress</td>
+</tr>
+<tr>
+<td>9</td>
+<td><span class="arithmatex">\(f_{A_{\text{max},d}}\)</span></td>
+<td>aMaxFrac</td>
+<td>avg. daily aMax as fraction of instantaneous</td>
+<td>fraction</td>
+<td>Avg. daily max photosynthesis as fraction of <span class="arithmatex">\(A_{\text{max}}\)</span></td>
+</tr>
+<tr>
+<td>10</td>
+<td><span class="arithmatex">\(R_\text{leaf,opt}\)</span></td>
+<td>baseFolRespFrac</td>
+<td>basal Foliar maintenance respiration as fraction of <span class="arithmatex">\(A_{\text{max}}\)</span></td>
+<td>fraction</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td><span class="arithmatex">\(T_{\text{min}}\)</span></td>
+<td>psnTMin</td>
+<td>Minimum temperature at which net photosynthesis occurs</td>
+<td><span class="arithmatex">\(^{\circ}\text{C}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td><span class="arithmatex">\(T_{\text{opt}}\)</span></td>
+<td>psnTOpt</td>
+<td>Optimum temperature at which net photosynthesis occurs</td>
+<td><span class="arithmatex">\(^{\circ}\text{C}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td><span class="arithmatex">\(K_\text{VPD}\)</span></td>
+<td>dVpdSlope</td>
+<td>Slope of VPD–photosynthesis relationship</td>
+<td><span class="arithmatex">\(kPa^{-1}\)</span></td>
+<td>dVpd = 1 - dVpdSlope * vpd^dVpdExp</td>
+</tr>
+<tr>
+<td>14</td>
+<td><span class="arithmatex">\(K_{\text{VPD}},{\text{exp}}\)</span></td>
+<td>dVpdExp</td>
+<td>Exponent used to calculate VPD effect on Psn</td>
+<td>dimensionless</td>
+<td>dVpd = 1 - dVpdSlope * vpd^dVpdExp</td>
+</tr>
+<tr>
+<td>15</td>
+<td><span class="arithmatex">\(\text{PAR}_{1/2}\)</span></td>
+<td>halfSatPar</td>
+<td>Half saturation point of PAR–photosynthesis relationship</td>
+<td><span class="arithmatex">\(m^{-2}\)</span>\ ground area <span class="arithmatex">\(\cdot\)</span> day<span class="arithmatex">\(^{-1}\)</span></td>
+<td>PAR at which photosynthesis occurs at 1/2 theoretical maximum</td>
+</tr>
+<tr>
+<td>16</td>
+<td><span class="arithmatex">\(k\)</span></td>
+<td>attenuation</td>
+<td>Canopy PAR extinction coefficient</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="phenology-related-parameters">Phenology-related parameters<a class="headerlink" href="#phenology-related-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Symbol</th>
+<th>Parameter Name</th>
+<th>Definition</th>
+<th>Units</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17</td>
+<td><span class="arithmatex">\(D_{\text{on}}\)</span></td>
+<td>leafOnDay</td>
+<td>Day of year when leaves appear</td>
+<td>day of year</td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td></td>
+<td>gddLeafOn</td>
+<td>with gdd-based phenology, gdd threshold for leaf appearance</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td></td>
+<td>soilTempLeafOn</td>
+<td>with soil temp-based phenology, soil temp threshold for leaf appearance</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td><span class="arithmatex">\(D_{\text{off}}\)</span></td>
+<td>leafOffDay</td>
+<td>Day of year for leaf drop</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td></td>
+<td>leafGrowth</td>
+<td>additional leaf growth at start of growing season</td>
+<td><span class="arithmatex">\(\text{g C} \cdot \text{m}^{-2} \text{ ground}\)</span></td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td></td>
+<td>fracLeafFall</td>
+<td>additional fraction of leaves that fall at end of growing season</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>23</td>
+<td><span class="arithmatex">\(\alpha_\text{leaf}\)</span></td>
+<td>leafAllocation</td>
+<td>fraction of NPP allocated to leaf growth</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td><span class="arithmatex">\(K_{leaf}\)</span></td>
+<td>leafTurnoverRate</td>
+<td>average turnover rate of leaves</td>
+<td><span class="arithmatex">\(\text{y}^{-1}\)</span></td>
+<td>converted to per-day rate internally</td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(L_{\text{max}}\)</span></td>
+<td></td>
+<td>Maximum leaf area index obtained</td>
+<td><span class="arithmatex">\(\text{m}^2 \text{ leaf } \text{m}^{-2} \text{ ground}\)</span></td>
+<td>? from Braswell et al 2005; can't find in code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="allocation-parameters">Allocation parameters<a class="headerlink" href="#allocation-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Symbol</th>
+<th>Parameter Name</th>
+<th>Definition</th>
+<th>Units</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>64</td>
+<td></td>
+<td>fineRootFrac</td>
+<td>fraction of wood carbon allocated to fine root</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>65</td>
+<td></td>
+<td>coarseRootFrac</td>
+<td>fraction of wood carbon that is coarse root</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>66</td>
+<td><span class="arithmatex">\(\alpha_\text{fine root}\)</span></td>
+<td>fineRootAllocation</td>
+<td>fraction of NPP allocated to fine roots</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>67</td>
+<td><span class="arithmatex">\(\alpha_\text{wood}\)</span></td>
+<td>woodAllocation</td>
+<td>fraction of NPP allocated to wood</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>68</td>
+<td></td>
+<td>fineRootExudation</td>
+<td>fraction of GPP from fine roots exuded to the soil[^exudates]</td>
+<td>fraction</td>
+<td>Pulsing parameters</td>
+</tr>
+<tr>
+<td>69</td>
+<td></td>
+<td>coarseRootExudation</td>
+<td>fraction of GPP from coarse roots exuded to the soil[^exudates]</td>
+<td>fraction</td>
+<td>Pulsing parameters</td>
+</tr>
+</tbody>
+</table>
+<p>[^exudates]: Fine and coarse root exudation are calculated as a fraction of GPP, but the exudates are subtracted from the fine and coarse root pools, respectively. <!--Note that previous versions incorrectly defined fine root exudates as a fraction of NPP--></p>
+<h3 id="autotrophic-respiration-parameters">Autotrophic respiration parameters<a class="headerlink" href="#autotrophic-respiration-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Symbol</th>
+<th>Parameter Name</th>
+<th>Definition</th>
+<th>Units</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>25</td>
+<td><span class="arithmatex">\(R_{\text{a,wood},0}\)</span></td>
+<td>baseVegResp</td>
+<td>Wood maintenance respiration rate at <span class="arithmatex">\(0^\circ C\)</span></td>
+<td>g C respired * g<span class="arithmatex">\(^{-1}\)</span> plant C * day<span class="arithmatex">\(^{-1}\)</span></td>
+<td>read in as per-year rate only counts plant wood C; leaves handled elsewhere (both above and below-ground: assumed for now to have same resp. rate)</td>
+</tr>
+<tr>
+<td>26</td>
+<td><span class="arithmatex">\(Q_{10v}\)</span></td>
+<td>vegRespQ10</td>
+<td>Vegetation respiration Q10</td>
+<td></td>
+<td>Scalar determining effect of temp on veg. resp.</td>
+</tr>
+<tr>
+<td>27</td>
+<td></td>
+<td>growthRespFrac</td>
+<td>growth resp. as fraction of (<span class="arithmatex">\(GPP - R_\text{a,wood} - R_\text{a,leaf}\)</span>)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>28</td>
+<td></td>
+<td>frozenSoilFolREff</td>
+<td>amount that foliar resp. is shutdown if soil is frozen</td>
+<td></td>
+<td>0 = full shutdown, 1 = no shutdown</td>
+</tr>
+<tr>
+<td>29</td>
+<td></td>
+<td>frozenSoilThreshold</td>
+<td>soil temperature below which frozenSoilFolREff and frozenSoilEff kick in</td>
+<td>°C</td>
+<td></td>
+</tr>
+<tr>
+<td>72</td>
+<td></td>
+<td>baseFineRootResp</td>
+<td>base respiration rate of fine roots</td>
+<td><span class="arithmatex">\(\text{y}^{-1}\)</span></td>
+<td>per year rate</td>
+</tr>
+<tr>
+<td>73</td>
+<td></td>
+<td>baseCoarseRootResp</td>
+<td>base respiration rate of coarse roots</td>
+<td><span class="arithmatex">\(\text{y}^{-1}\)</span></td>
+<td>per year rate</td>
+</tr>
+</tbody>
+</table>
+<h3 id="soil-respiration-parameters">Soil respiration parameters<a class="headerlink" href="#soil-respiration-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Symbol</th>
+<th>Parameter Name</th>
+<th>Definition</th>
+<th>Units</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30</td>
+<td><span class="arithmatex">\(K_\text{litter}\)</span></td>
+<td>litterBreakdownRate</td>
+<td>rate at which litter is converted to soil / respired at 0°C and max soil moisture</td>
+<td>g C broken down * g^-1 litter C * day^-1</td>
+<td>read in as per-year rate</td>
+</tr>
+<tr>
+<td>31</td>
+<td></td>
+<td>fracLitterRespired</td>
+<td>of the litter broken down, fraction respired (the rest is transferred to soil pool)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>32</td>
+<td><span class="arithmatex">\(K_{dec}\)</span></td>
+<td>baseSoilResp</td>
+<td>Soil respiration rate at <span class="arithmatex">\(0 ^{\circ}\text{C}\)</span> and moisture saturated soil</td>
+<td>g C respired * g<span class="arithmatex">\(^{-1}\)</span> soil C * day<span class="arithmatex">\(^{-1}\)</span></td>
+<td>read in as per-year rate</td>
+</tr>
+<tr>
+<td>34</td>
+<td><span class="arithmatex">\(Q_{10s}\)</span></td>
+<td>soilRespQ10</td>
+<td>Soil respiration Q10</td>
+<td></td>
+<td>scalar determining effect of temp on soil respiration</td>
+</tr>
+<tr>
+<td>39</td>
+<td></td>
+<td>soilRespMoistEffect</td>
+<td>scalar determining effect of moisture on soil resp.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>baseMicrobeResp</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>new</td>
+<td><span class="arithmatex">\(f_{\textrm{till}}\)</span></td>
+<td>tillageEff</td>
+<td>Effect of tillage on decomposition that exponentially decays over time</td>
+<td>fraction</td>
+<td>Per‑event in <code>events.in</code>; 0 = no effect</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="arithmatex">\(R_{dec}\)</span>: Rate of decomposition <span class="arithmatex">\((\text{day}^{-1})\)</span> </li>
+<li><span class="arithmatex">\(Q_{10dec}\)</span>: Temperature coefficient for <span class="arithmatex">\(R_{dec}\)</span> (unitless)</li>
+</ul>
+<h3 id="nitrogen-cycle-parameters">Nitrogen Cycle Parameters<a class="headerlink" href="#nitrogen-cycle-parameters" title="Permanent link">&para;</a></h3>
+<!--
+- $K_{nitr}$: Rate constant for nitrification (day$^{-1}$)
+- $K_{denitr}$: Rate constant for denitrification (day$^{-1}$)
+-->
+
+<ul>
+<li><span class="arithmatex">\(K_{n,vol}\)</span>: Rate constant for volatilization (day-1)</li>
+<li><span class="arithmatex">\(f_{N2O_{vol}}\)</span>: Fraction of volatilization leading to N2O production</li>
+<li><span class="arithmatex">\(R_{min}\)</span>: Rate of mineralization (day-1)</li>
+<li><span class="arithmatex">\(I_\text{N limit}\)</span>: Indicator for nitrogen limitation</li>
+</ul>
+<!--- $f_{N2O_{nitr}}$: Fraction of nitrification leading to N$_2$O production
+- $f_{N2O_{denitr}}$: Fraction of denitrification leading to N$_2$O production
+-->
+
+<!--
+- $R_{nitr}$: Rate of nitrification (day$^{-1}$)
+- $R_{denitr}$: Rate of denitrification (day$^{-1}$)
+- $Q_{10nitr}$: Temperature coefficient for $R_{nitr}$ (unitless)
+- $Q_{10denitr}$: Temperature coefficient for $R_{denitr}$ (unitless)
+-->
+
+<h3 id="methane-parameters">Methane parameters<a class="headerlink" href="#methane-parameters" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(R_{meth}\)</span>: Rate of methane production <span class="arithmatex">\((\text{day}^{-1})\)</span></li>
+<li><span class="arithmatex">\(K_{meth}\)</span>: Rate constant for methane production under anaerobic conditions <span class="arithmatex">\((\text{day}^{-1})\)</span></li>
+<li><span class="arithmatex">\(K_{methox}\)</span>: Rate constant, methane oxidation <span class="arithmatex">\((\text{day}^{-1})\)</span></li>
+</ul>
+<h3 id="moisture-related-parameters">Moisture-related parameters<a class="headerlink" href="#moisture-related-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Symbol</th>
+<th>Parameter Name</th>
+<th>Definition</th>
+<th>Units</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>40</td>
+<td><span class="arithmatex">\(f_{\text{trans,avail}}\)</span></td>
+<td>waterRemoveFrac</td>
+<td>fraction of plant available soil water which can be removed in one day by transpiration without water stress occurring</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>new</td>
+<td><span class="arithmatex">\(f_\text{drain,0}\)</span></td>
+<td>waterDrainFrac</td>
+<td>fraction of plant available soil water which can be removed in one day by drainage</td>
+<td><span class="arithmatex">\(d^{-1}\)</span></td>
+<td>default 1 for well drained soils</td>
+</tr>
+<tr>
+<td>41</td>
+<td></td>
+<td>frozenSoilEff</td>
+<td>fraction of water that is available if soil is frozen (0 = none available, 1 = all still avail.)</td>
+<td></td>
+<td>if frozenSoilEff = 0, then shut down psn. even if WATER_PSN = 0, if soil is frozen (if frozenSoilEff &gt; 0, it has no effect if WATER_PSN = 0)</td>
+</tr>
+<tr>
+<td>42</td>
+<td></td>
+<td>wueConst</td>
+<td>water use efficiency constant</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>43</td>
+<td></td>
+<td>litterWHC</td>
+<td>litter (evaporative layer) water holding capacity</td>
+<td>cm</td>
+<td></td>
+</tr>
+<tr>
+<td>44</td>
+<td></td>
+<td>soilWHC</td>
+<td>soil (transpiration layer) water holding capacity</td>
+<td>cm</td>
+<td></td>
+</tr>
+<tr>
+<td>45</td>
+<td>$f_\text{intercept}</td>
+<td>immedEvapFrac</td>
+<td>fraction of rain that is immediately intercepted &amp; evaporated</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>46</td>
+<td></td>
+<td>fastFlowFrac</td>
+<td>fraction of water entering soil that goes directly to drainage</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(k_\text{SOM,drain}\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>47</td>
+<td></td>
+<td>snowMelt</td>
+<td>rate at which snow melts</td>
+<td>cm water equivavlent per degree Celsius per day</td>
+<td></td>
+</tr>
+<tr>
+<td>49</td>
+<td></td>
+<td>rdConst</td>
+<td>scalar determining amount of aerodynamic resistance</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>50</td>
+<td></td>
+<td>rSoilConst1</td>
+<td></td>
+<td></td>
+<td>soil resistance = e^(rSoilConst1 - rSoilConst2 * W1) , where W1 = (litterWater/litterWHC)</td>
+</tr>
+<tr>
+<td>51</td>
+<td></td>
+<td>rSoilConst2</td>
+<td></td>
+<td></td>
+<td>soil resistance = e^(rSoilConst1 - rSoilConst2 * W1) , where W1 = (litterWater/litterWHC)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tree-physiological-parameters">Tree physiological parameters<a class="headerlink" href="#tree-physiological-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Symbol</th>
+<th>Parameter Name</th>
+<th>Definition</th>
+<th>Units</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>53</td>
+<td><span class="arithmatex">\(SLW\)</span></td>
+<td>leafCSpWt</td>
+<td></td>
+<td>g C * m^-2 leaf area</td>
+<td></td>
+</tr>
+<tr>
+<td>54</td>
+<td><span class="arithmatex">\(C_{frac}\)</span></td>
+<td>cFracLeaf</td>
+<td></td>
+<td>g leaf C * g^-1 leaf</td>
+<td></td>
+</tr>
+<tr>
+<td>55</td>
+<td><span class="arithmatex">\(K_\text{wood}\)</span></td>
+<td>woodTurnoverRate</td>
+<td>average turnover rate of woody plant C</td>
+<td><span class="arithmatex">\(\text{y}^{-1}\)</span></td>
+<td>converted to per-day rate internally; leaf loss handled separately</td>
+</tr>
+<tr>
+<td>70</td>
+<td><span class="arithmatex">\(K_\text{fine root}\)</span></td>
+<td>fineRootTurnoverRate</td>
+<td>turnover of fine roots</td>
+<td><span class="arithmatex">\(\text{y}^{-1}\)</span></td>
+<td>converted to per-day rate internally</td>
+</tr>
+<tr>
+<td>71</td>
+<td><span class="arithmatex">\(K_\text{coarse root}\)</span></td>
+<td>coarseRootTurnoverRate</td>
+<td>turnover of coarse roots</td>
+<td><span class="arithmatex">\(\text{y}^{-1}\)</span></td>
+<td>converted to per-day rate internally</td>
+</tr>
+</tbody>
+</table>
+<!--
+### Quality model parameters
+
+
+|     | Symbol | Parameter Name   | Definition                                | Units                 | notes                         |
+| --- | ------ | ---------------- | ----------------------------------------- | --------------------- | ----------------------------- |
+| 58  |        | efficiency       | conversion efficiency of ingested carbon  |                       | Microbe & Stoichiometry model |
+| 59  |        | maxIngestionRate | maximum ingestion rate of the microbe     | hr-1                  | Microbe & Stoichiometry model |
+| 60  |        | halfSatIngestion | half saturation ingestion rate of microbe | mg C g-1 soil         | Microbe & Stoichiometry model |
+| 63  |        | microbeInit      |                                           | mg C / g soil microbe | initial carbon amount         | -->
+<p>|</p>
+<!-- Not used in CCMMF (two Q10s , soil and veg); no microbes
+| 74 |                   | fineRootQ10            | Q10 of fine roots                                  |                       |                               |
+| 75 |                   | coarseRootQ10          | Q10 of coarse roots                                |                       |                               |
+| 76 |                   | baseMicrobeResp        | base respiration rate of microbes                  |                       |                               |
+| 77 |                   | microbeQ10             | Q10 of microbes                                |                       |                               |
+| 78 |                   | microbePulseEff        | fraction of exudates that microbes immediately use |                       | Pulsing parameters            |
+
+-->
+
+<h2 id="hard-coded-values">Hard-coded Values<a class="headerlink" href="#hard-coded-values" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>C_WEIGHT</code></td>
+<td>12.0</td>
+<td>molecular weight of carbon</td>
+</tr>
+<tr>
+<td><code>MEAN_NPP_DAYS</code></td>
+<td>5</td>
+<td>over how many days do we keep the running mean</td>
+</tr>
+<tr>
+<td><code>MEAN_NPP_MAX_ENTRIES</code></td>
+<td><code>MEAN_NPP_DAYS</code>*50</td>
+<td>assume that the most pts we can have is two per hour</td>
+</tr>
+<tr>
+<td><code>MEAN_GPP_SOIL_DAYS</code></td>
+<td>5</td>
+<td>over how many days do we keep the running mean</td>
+</tr>
+<tr>
+<td><code>MEAN_GPP_SOIL_MAX_ENTRIES</code></td>
+<td><code>MEAN_GPP_SOIL_DAYS</code>*50</td>
+<td>assume that the most pts we can have is one per hour</td>
+</tr>
+<tr>
+<td><code>LAMBDA</code></td>
+<td>2501000</td>
+<td>latent heat of vaporization (J/kg)</td>
+</tr>
+<tr>
+<td><code>LAMBDA_S</code></td>
+<td>2835000</td>
+<td>latent heat of sublimation (J/kg)</td>
+</tr>
+<tr>
+<td><code>RHO</code></td>
+<td>1.3</td>
+<td>air density (kg/m^3)</td>
+</tr>
+<tr>
+<td><code>CP</code></td>
+<td>1005.</td>
+<td>specific heat of air (J/(kg K))</td>
+</tr>
+<tr>
+<td><code>GAMMA</code></td>
+<td>66</td>
+<td>psychometric constant (Pa/K)</td>
+</tr>
+<tr>
+<td><code>E_STAR_SNOW</code></td>
+<td>0.6</td>
+<td>approximate saturation vapor pressure at 0°C (kPa)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="input-files">Input Files<a class="headerlink" href="#input-files" title="Permanent link">&para;</a></h2>
+<p>See <a href="../user-guide/model-inputs/">Model Inputs</a>.</p>
+<h2 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
+<p>See <a href="../user-guide/model-outputs/">Model Outputs</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.code.copy", "navigation.expand"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
